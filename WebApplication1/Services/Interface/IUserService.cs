@@ -7,6 +7,6 @@ namespace WebApplication1.Services.Interface
 {
     public interface IUserService
     {
-        string GenerateToken(string? userName);
+        string GenerateToken(int userId);
     }
 }

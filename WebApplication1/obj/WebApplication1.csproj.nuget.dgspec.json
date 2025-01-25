@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "R:\\testNet\\WebApplication1\\WebApplication1.csproj": {}
+    "r:\\test2\\lDotnet\\WebApplication1\\WebApplication1.csproj": {}
   },
   "projects": {
-    "R:\\testNet\\WebApplication1\\WebApplication1.csproj": {
+    "r:\\test2\\lDotnet\\WebApplication1\\WebApplication1.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "R:\\testNet\\WebApplication1\\WebApplication1.csproj",
+        "projectUniqueName": "r:\\test2\\lDotnet\\WebApplication1\\WebApplication1.csproj",
         "projectName": "WebApplication1",
-        "projectPath": "R:\\testNet\\WebApplication1\\WebApplication1.csproj",
+        "projectPath": "r:\\test2\\lDotnet\\WebApplication1\\WebApplication1.csproj",
         "packagesPath": "C:\\Users\\Ball\\.nuget\\packages\\",
-        "outputPath": "R:\\testNet\\WebApplication1\\obj\\",
+        "outputPath": "r:\\test2\\lDotnet\\WebApplication1\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",

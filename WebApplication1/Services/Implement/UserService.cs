@@ -20,7 +20,7 @@ namespace WebApplication1.Services.Implement
         {
             _applicationSettings = applicationSettings.Value;
         }
-        public string GenerateToken(string? userName)
+        public string GenerateToken(int userId)
         {
             var tokenHandler = new JwtSecurityTokenHandler();
             var key = Encoding.ASCII.GetBytes(_applicationSettings.Secret);
@@ -28,7 +28,7 @@ namespace WebApplication1.Services.Implement
             {
                 Subject = new ClaimsIdentity(new[]
                 {
-                new Claim("userName", userName)//userName
+                new Claim("userId", userId.ToString())//userName
             }),
                 SigningCredentials = new SigningCredentials(new SymmetricSecurityKey(key), SecurityAlgorithms.HmacSha256Signature)
             };

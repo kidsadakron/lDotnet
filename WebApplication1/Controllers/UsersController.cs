@@ -2,6 +2,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using WebApplication1.Modals.Entities;
 using WebApplication1.Models.Entities;
@@ -34,6 +35,14 @@ namespace WebApplication1.Controllers
             return Ok(result);
         }
 
+        [HttpGet("getUserByToken")]
+        public IActionResult GetUserByToken()
+        {
+            int UserId = (int)HttpContext.Items["userId"];
+            var result = _userRepository.GetUserById(UserId);
+            return Ok(result);
+        }
+
         [HttpGet("{id}")]
         public IActionResult GetUserById(int id)
         {
@@ -62,10 +71,11 @@ namespace WebApplication1.Controllers
             return Ok(result);
         }
         [HttpGet("GetToken/{id}")]
+        [AllowAnonymous]
         public IActionResult GetToken(int id)
         {
             var user = _userRepository.GetUserById(id);
-            var result = _userService.GenerateToken(user.Username);
+            var result = _userService.GenerateToken(user.Id);
             return Ok(result);
         }
     }
